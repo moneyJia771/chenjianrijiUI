@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - 晨间计划</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .status-bar {
+            height: 44px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            font-size: 12px;
+        }
+        .tab-bar {
+            height: 83px;
+            background-color: #ffffff;
+            border-top: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 30px;
+        }
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 8px;
+        }
+        .tab-icon {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        .tab-label {
+            font-size: 10px;
+        }
+        .profile-header {
+            background-color: white;
+            padding: 24px 16px;
+            display: flex;
+            align-items: center;
+        }
+        .avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 35px;
+            object-fit: cover;
+            margin-right: 16px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            background-color: white;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .menu-item-left {
+            display: flex;
+            align-items: center;
+        }
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: #007AFF;
+        }
+        .menu-section {
+            margin-bottom: 16px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- 状态栏 -->
+    <div class="status-bar">
+        <div>9:41</div>
+        <div class="flex space-x-2">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 个人信息头部 -->
+    <div class="profile-header">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="用户头像" class="avatar">
+        <div>
+            <h2 class="text-xl font-semibold">张晓明</h2>
+            <p class="text-gray-500 text-sm">已坚持打卡 15 天</p>
+        </div>
+    </div>
+
+    <!-- 统计卡片 -->
+    <div class="grid grid-cols-3 bg-white p-4 mb-4">
+        <div class="text-center">
+            <p class="text-2xl font-semibold text-blue-500">15</p>
+            <p class="text-xs text-gray-500">打卡天数</p>
+        </div>
+        <div class="text-center border-l border-r border-gray-200">
+            <p class="text-2xl font-semibold text-green-500">82%</p>
+            <p class="text-xs text-gray-500">平均完成度</p>
+        </div>
+        <div class="text-center">
+            <p class="text-2xl font-semibold text-purple-500">8</p>
+            <p class="text-xs text-gray-500">连续打卡</p>
+        </div>
+    </div>
+
+    <!-- 菜单列表 -->
+    <div class="flex-1 px-4 overflow-auto">
+        <!-- 功能菜单 -->
+        <div class="menu-section shadow-sm">
+            <a href="#" class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <span>提醒和声音</span>
+                </div>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+            </a>
+            
+            <a href="#" class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <span>分享给好友</span>
+                </div>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+            </a>
+            
+            <a href="settings.html" class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <span>设置</span>
+                </div>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+            </a>
+        </div>
+        
+        <!-- 关于菜单 -->
+        <div class="menu-section shadow-sm">
+            <a href="#" class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <span>关于我们</span>
+                </div>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+            </a>
+            
+            <a href="#" class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span>给我们评分</span>
+                </div>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+            </a>
+            
+            <a href="#" class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <span>帮助与反馈</span>
+                </div>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- 底部标签栏 -->
+    <div class="tab-bar">
+        <a href="home.html" class="tab-item">
+            <div class="tab-icon text-gray-500"><i class="fas fa-home"></i></div>
+            <div class="tab-label text-gray-500">首页</div>
+        </a>
+        <a href="dashboard.html" class="tab-item">
+            <div class="tab-icon text-gray-500"><i class="fas fa-chart-bar"></i></div>
+            <div class="tab-label text-gray-500">数据</div>
+        </a>
+        <a href="profile.html" class="tab-item">
+            <div class="tab-icon text-blue-500"><i class="fas fa-user"></i></div>
+            <div class="tab-label text-blue-500">我的</div>
+        </a>
+    </div>
+</body>
+</html>
